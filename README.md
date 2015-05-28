@@ -25,15 +25,15 @@ DEC=8
 x=23 #column 23 contains a string with the weeks the sources appear/disappear*
 distance=25 #distance to the nearest known fermi source
 
-	*Example:
+	Example:
 
-	# eg:	Healpix[col 0] 	Weeks sources appears[col 23]			Weeks sources disappears[col 24]
+	 eg:	Healpix[col 0] 	Weeks sources appears[col 23]			Weeks sources disappears[col 24]
 
-	#		444140   		sig_match_sorted_253_256.dat 	sig_match_sorted_249_252.dat   
-    #	 	444140  		sig_match_sorted_253_256.dat 	sig_match_sorted_257_260.dat 
+			444140   		sig_match_sorted_253_256.dat 	sig_match_sorted_249_252.dat   
+    	 	444140  		sig_match_sorted_253_256.dat 	sig_match_sorted_257_260.dat 
+    	 	
 
-
-# Notice that weeks 253-256 are the weeks that the source 444140 appears. This source is repeated. 
+Notice that weeks 253-256 are the weeks that the source 444140 appears. This source is repeated. 
 The source is to be analysized for the weeks 253-256.
 
 	Example:
