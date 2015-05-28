@@ -1,0 +1,20 @@
+import pyfits
+datafile="000001_1_1_w157_w160_newspacecraft.fits"
+
+f = pyfits.open(datafile) # open a FITS file
+
+
+#tbdata = f[1].data # assume the first extension is a table
+header=pyfits.getheader(datafile,1) 
+header.keys()
+#TFields=header['EXTNAME'] #gives the number of columns in the table
+
+
+#header.update(key="EXTNAME", value="SC_DATA", comment="Name of the table")
+
+#header.insert('TFields', ('EXTNAME' , 'SC_DATA'))
+
+card0=pyfits.Card('EXTNAME' , 'SC_DATA')
+header.append(card0)
+
+print header

@@ -1,0 +1,27 @@
+import subprocess
+import cfg
+
+def gtlikefunc(identity,outputmodel,spacecraft,region_filtered,expmap,ltcube,inputmodel):
+	
+		
+		
+
+
+	with open("%s_output_gtlike.log" % (identity),"a") as outputFile:
+		proc = subprocess.Popen(['gtlike','refit=no','plot=no','sfile="%s"' % (outputmodel)],stdin=subprocess.PIPE,stdout=outputFile)
+		proc.communicate('UNBINNED\n\
+%s\n\
+%s\n\
+%s\n\
+%s\n\
+%s\n\
+P7REP_SOURCE_V15\n\
+NEWMINUIT\n' %(spacecraft,region_filtered,expmap,ltcube,inputmodel))
+
+
+
+
+if __name__ == "__main__":
+    import sys
+    gtlikefunc(str(sys.argv[1]),str(sys.argv[2]),str(sys.argv[3]),str(sys.argv[4]),str(sys.argv[5]),str(sys.argv[6]),str(sys.argv[7]))
+
