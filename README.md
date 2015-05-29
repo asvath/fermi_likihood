@@ -60,6 +60,7 @@ Given a fermi source, selects data based on radius of interest (ROI), energy ran
 
 	Example:
 	$python gtselect.py healpix number,ra,dec,week1,week2
+	(where week1 is the weeek that the source appears and week2 is when the source disappears)
 
 ******************************************************************************
 gtexmpmapcall.py
@@ -103,8 +104,15 @@ Runs the gtlike application on the source that you are analysising. Generates fi
 
 ******************************************************************************
 tsfile.py
+Generates a file for sources with TS value more than 25. File also includes the following info: healpix,ra,dec,week1,week2,distance
 
+	Example:
+	$python tsfile.py healpix,ra,dec,week1,week2,distance
+	
+******************************************************************************
 emailsy.py
+
+
 gtbin.py
 movefiles.py
 fermitute.py
