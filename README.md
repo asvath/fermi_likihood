@@ -8,9 +8,13 @@ It performs the likelihood analysis on sources provided in a data list (can be c
 
 If the resulting test statistic is more than 25, the program sends the user an email with the following details:
 -Name of source
+
 -TS value
+
 -RA and DEC 
+
 -Folder where source can be found
+
 -The week number when the source had a TS >25.
 
 Example of a line the data list:
