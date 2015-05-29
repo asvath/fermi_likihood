@@ -181,13 +181,13 @@ This is the configuration file. Allows the user to set the following:
 
 The following numbers are for the gtlike and gtexp functions (refer to fermi likelihood tutorial): 
 
-radius=20
-lowerenergy=100
-upperenergy=100000
-zenith=100
-radius1=30
-longitude=120
-latitude=120
-energies=20
+-radius=20
+-lowerenergy=100
+-upperenergy=100000
+-zenith=100
+-radius1=30
+-longitude=120
+-latitude=120
+-energies=20
 
 This can be changed, and changes should be added to gtlike and gtexp
