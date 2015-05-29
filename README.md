@@ -160,4 +160,34 @@ fermitute.py
 Runs the entire fermi likelihood tutorial on a single source
 
 	Example:
+	$python fermitute.py healpix,ra,dec,week1,week2,distance
+	
+******************************************************************************
 cfg.py
+
+This is the configuration file. Allows the user to set the following:
+-The directory where all the fuctions live
+-The path to the spacecraft file
+-Name of folder where all files are stored
+-Name of folder for each individual source e.g NGC185_healpix_ra_dec_week1_week2
+-Name of the data file
+-Healpix column number in a given data file
+-Column number of RA
+-Column number of DEC
+-Column number of the string where the source appears and disappears
+-Interval: Number of weeks to analyse the source
+-The response function eg."P7REP_SOURCE_V15"
+-The python version used e.g pythoncommand="/opt/rocks/bin/python"
+
+#the following numbers are for the gtlike and gtexp functions (refer to fermi likelihood tutorial): http://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/likelihood_tutorial.html
+
+radius=20
+lowerenergy=100
+upperenergy=100000
+zenith=100
+radius1=30
+longitude=120
+latitude=120
+energies=20
+
+This can be changed, and changes should be added to gtlike and gtexp
