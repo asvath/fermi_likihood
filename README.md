@@ -179,7 +179,7 @@ This is the configuration file. Allows the user to set the following:
 -The response function eg."P7REP_SOURCE_V15"
 -The python version used e.g pythoncommand="/opt/rocks/bin/python"
 
-#the following numbers are for the gtlike and gtexp functions (refer to fermi likelihood tutorial): http://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/likelihood_tutorial.html
+The following numbers are for the gtlike and gtexp functions (refer to fermi likelihood tutorial): http://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/likelihood_tutorial.html
 
 radius=20
 lowerenergy=100
