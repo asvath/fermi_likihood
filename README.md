@@ -104,6 +104,7 @@ Runs the gtlike application on the source that you are analysising. Generates fi
 
 ******************************************************************************
 tsfile.py
+
 Generates a file for sources with TS value more than 25. File also includes the following info: healpix,ra,dec,week1,week2,distance
 
 	Example:
@@ -112,8 +113,51 @@ Generates a file for sources with TS value more than 25. File also includes the 
 ******************************************************************************
 emailsy.py
 
+Sends an e-mail to the user if a source with TS value more than 25 is found.
 
+The e-mail contains the following details:
+	RA 
+	DEC
+	TS
+	Weeks
+	Distance
+	Folder
+	
+	
+	Example:
+	$python emailsy.py healpix,ra,dec,week1,week2,distance
+	
+******************************************************************************
 gtbin.py
+
+gtbin is used to "Create a counts map of the ROI, summed over photon energies, in order to identify candidate sources and to ensure that the field looks sensible as a simple sanity check. For creating the counts map, we will use the gtbin tool".
+
+	Example:
+	$python gtbin.py healpix,ra,dec,week1,week2
+	
+******************************************************************************
 movefiles.py
+
+Moves files depending on if there is an extended source.
+Names of folders can be changed in cfg.py
+Format of folders is as follows:
+
+If there is one extended source:
+"%s/%s_%s" %(cfg.folder_extended,cfg.name2,identity)
+
+No extended source:
+"%s/%s_%s" %(cfg.folder,cfg.name2,identity)
+
+More than one extended source:
+"%s/%s_%s" %(cfg.folder_others,cfg.name2,identity)
+
+	Example:
+	$python movefilesfunc(healpix,ra,dec,week1,week2)
+
+******************************************************************************
 fermitute.py
+
+Runs the entire fermi likelihood tutorial on a single source
+
+	Example:
 cfg.py
